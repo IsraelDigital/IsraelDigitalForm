@@ -1,0 +1,486 @@
+@import url("bradcrump.css");
+@import url("aside-dig.css");
+body {
+  direction: rtl; }
+  body .nav-tabs > li {
+    float: right;
+    margin-bottom: -1px; }
+
+body > .container > h2 {
+  color: #263c4a;
+  font-size: 55px;
+  font-weight: 400;
+  line-height: 37px; }
+
+body > .container > h3 a {
+  padding-right: 15px;
+  box-sizing: border-box; }
+  body > .container > h3 a img {
+    width: 21px;
+    height: 21px;
+    margin-left: 5px; }
+
+.breadcrumbs {
+  border-top: none;
+  border-bottom: none;
+  background-color: #f5f5f5;
+  border-right: 0;
+  direction: rtl;
+  margin: 30px 0;
+  background-color: #eeeeee; }
+  .breadcrumbs .inner {
+    width: 100%; }
+    .breadcrumbs .inner .cf li a {
+      display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      -ms-grid-row-align: center;
+      align-items: center;
+      -ms-flex-line-pack: center;
+      align-content: center;
+      justify-content: center;
+      padding: 0; }
+      .breadcrumbs .inner .cf li a .Img-smart {
+        border-radius: 50%;
+        background-color: #fff;
+        border: 1px solid #595959;
+        width: 50px;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 15px; }
+        .breadcrumbs .inner .cf li a .Img-smart div {
+          border-radius: 50%;
+          background-color: #595959;
+          width: 44px;
+          height: 44px;
+          display: flex;
+          justify-content: center;
+          align-items: center; }
+          .breadcrumbs .inner .cf li a .Img-smart div img {
+            width: 25px;
+            height: 25px;
+            padding: 0; }
+      .breadcrumbs .inner .cf li a span {
+        font-size: 23px;
+        line-height: 37px;
+        font-weight: 400; }
+      .breadcrumbs .inner .cf li a .num {
+        padding-left: 15px; }
+      .breadcrumbs .inner .cf li a img {
+        height: 50px;
+        padding-left: 15px; }
+  .breadcrumbs ul {
+    border-right: none;
+    border-left: none;
+    width: 100%;
+    height: 90px; }
+    .breadcrumbs ul li {
+      width: 25%;
+      height: 90px; }
+      .breadcrumbs ul li a {
+        font-size: 23px;
+        line-height: 37px;
+        font-weight: 400;
+        font-family: arial,san-sarif;
+        color: #595959;
+        height: 90px; }
+      .breadcrumbs ul li a:after {
+        border-right-color: #eeeeee; }
+
+.aside-left ul, .main form {
+  border-top: 2px solid #676767;
+  padding: 0 10px;
+  box-sizing: border-box; }
+
+body .container {
+  padding: 0; }
+
+.aside-left ul li {
+  border-bottom: 2px solid #676767; }
+  .aside-left ul li h2 {
+    color: #263c4a;
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 37px;
+    margin: 15px 0 0 0; }
+  .aside-left ul li article {
+    text-align: center;
+    color: #595959;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 20px;
+    margin-bottom: 30px;
+    padding: 10px;
+    box-sizing: border-box; }
+    .aside-left ul li article img {
+      width: 41px;
+      height: 33px;
+      margin-bottom: 10px; }
+
+.main form ul li {
+  background-color: #eeeeee;
+  margin-bottom: 30px;
+  border-bottom: 2px solid #676767; }
+  .main form ul li section {
+    padding: 15px 15px 30px;
+    box-sizing: border-box; }
+    .main form ul li section p {
+      color: #263c4a;
+      font-size: 23px;
+      font-weight: 400;
+      line-height: 20px;
+      padding-bottom: 15px; }
+    .main form ul li section div {
+      display: flex;
+      justify-content: space-between; }
+      .main form ul li section div .select {
+        background-color: #285c7e;
+        color: #fff; }
+      .main form ul li section div button {
+        width: 30%;
+        height: 60px; }
+        .main form ul li section div button h3 {
+          font-size: 20px;
+          margin: 0;
+          padding: 5px; }
+      .main form ul li section div button:hover {
+        background-color: #c7dae4; }
+        .main form ul li section div button:hover h3 {
+          color: black; }
+      .main form ul li section div button:active {
+        background-color: #285c7e; }
+        .main form ul li section div button:active h3 {
+          color: #fff; }
+    .main form ul li section .two-elements {
+      width: 338px; }
+      .main form ul li section .two-elements button {
+        width: 154px; }
+      .main form ul li section .two-elements button.plusimg {
+        width: 45%;
+        display: flex;
+        justify-content: flex-start;
+        padding: 5px;
+        box-sizing: border-box;
+        height: 60px; }
+        .main form ul li section .two-elements button.plusimg img {
+          width: auto;
+          height: 33px;
+          padding-left: 5px; }
+    .main form ul li section .two-elements-s {
+      width: 100%; }
+    .main form ul li section .threeElement {
+      width: 492px; }
+      .main form ul li section .threeElement button {
+        width: 154px; }
+    .main form ul li section .e-3-50-per {
+      width: 350px;
+      display: flex;
+      justify-content: space-between; }
+      .main form ul li section .e-3-50-per button {
+        width: 114px; }
+    .main form ul li section .flex-wrap {
+      display: flex;
+      flex-wrap: wrap;
+      width: 494px; }
+      .main form ul li section .flex-wrap button {
+        width: 234px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 5px;
+        box-sizing: border-box;
+        height: 60px;
+        margin-bottom: 30px; }
+        .main form ul li section .flex-wrap button img {
+          width: auto;
+          height: 33px;
+          padding-left: 5px; }
+    .main form ul li section .place {
+      display: flex;
+      flex-direction: column-reverse; }
+      .main form ul li section .place label {
+        font-family: Arial;
+        color: #272727;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 20px; }
+      .main form ul li section .place input {
+        height: 60px;
+        width: 224px;
+        border: 1px solid #888888;
+        font-family: Arial;
+        color: #272727;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 20px;
+        padding-right: 10px; }
+    .main form ul li section .homeLand {
+      width: 418px; }
+      .main form ul li section .homeLand .place {
+        margin-left: 30px; }
+      .main form ul li section .homeLand select {
+        width: 164px;
+        height: 60px;
+        font-family: Arial;
+        color: #272727;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 20px;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        background: url("../dig-israel-img/drop.png") no-repeat;
+        background-position: 10px 23px;
+        text-indent: 0.01px;
+        text-overflow: "";
+        background-color: white;
+        padding-right: 5px;
+        background-size: 15px 9px;
+        border: 1px solid #888888; }
+
+form header {
+  display: flex;
+  align-items: center;
+  height: 85px; }
+  form header img {
+    height: 60px;
+    padding-left: 15px;
+    box-sizing: border-box; }
+  form header h2 {
+    color: #263c4a;
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 36.923px; }
+form .sub-b {
+  display: flex;
+  border-radius: 7px;
+  background-color: #285c7e;
+  width: 186px;
+  height: 46px;
+  float: left;
+  margin-bottom: 55px; }
+  form .sub-b h3 {
+    font-family: Arial;
+    color: #ffffff;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 36.923px;
+    margin: auto; }
+form .border {
+  height: 2px;
+  background-color: #676767;
+  width: 100%;
+  clear: both; }
+form footer {
+  display: flex;
+  justify-content: space-between;
+  margin: 30px 0 90px 0; }
+  form footer .btn {
+    display: flex;
+    border-radius: 7px;
+    height: 40px; }
+    form footer .btn h3 {
+      margin: 0;
+      font-size: 18px; }
+    form footer .btn h2 {
+      margin: 0;
+      font-size: 22px; }
+  form footer .btn-primary {
+    width: 40%;
+    background-color: #285c7e;
+    justify-content: center; }
+  form footer .btn-secondary {
+    width: 20%;
+    background-color: #fff;
+    border: 1px solid #285c7e;
+    color: #285c7e;
+    justify-content: space-around;
+    align-items: baseline; }
+    form footer .btn-secondary img {
+      height: 20px; }
+
+.form1 ul li .birthday .wrap-all {
+  display: flex;
+  width: 100%; }
+  .form1 ul li .birthday .wrap-all .side-right {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    padding-right: 0;
+    box-sizing: border-box; }
+    .form1 ul li .birthday .wrap-all .side-right .birthday-div {
+      width: 338px; }
+      .form1 ul li .birthday .wrap-all .side-right .birthday-div button {
+        width: 154px; }
+  .form1 ul li .birthday .wrap-all .side-left .massage {
+    width: 100%;
+    height: auto;
+    margin-left: 2px;
+    position: relative;
+    background-color: #285c7e;
+    padding: 0; }
+    .form1 ul li .birthday .wrap-all .side-left .massage .triangle {
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 15px 0 15px 15px;
+      border-color: transparent transparent transparent #285c7e;
+      padding: 0;
+      position: absolute;
+      top: 40%;
+      right: -15px; }
+    .form1 ul li .birthday .wrap-all .side-left .massage .flex-row {
+      display: flex;
+      width: 100%;
+      padding: 5px; }
+      .form1 ul li .birthday .wrap-all .side-left .massage .flex-row img {
+        padding-left: 10px;
+        box-sizing: border-box; }
+      .form1 ul li .birthday .wrap-all .side-left .massage .flex-row article.flex-col {
+        display: flex;
+        width: 100%;
+        flex-direction: column; }
+        .form1 ul li .birthday .wrap-all .side-left .massage .flex-row article.flex-col p {
+          font-size: 11px;
+          line-height: 20px;
+          font-weight: 400;
+          font-family: arial,san-sarif;
+          line-height: 14px !important;
+          color: #fff; }
+        .form1 ul li .birthday .wrap-all .side-left .massage .flex-row article.flex-col button {
+          padding: 5px;
+          border-radius: 10px;
+          height: 72px; }
+.form1 ul li .birthday .birth-input {
+  width: 492px;
+  padding: 10px;
+  padding-right: 0;
+  box-sizing: border-box;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px; }
+  .form1 ul li .birthday .birth-input select {
+    width: 154px;
+    font-family: Arial;
+    color: #272727;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 20px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: url("../dig-israel-img/drop.png") no-repeat;
+    background-position: 10px 23px;
+    text-indent: 0.01px;
+    text-overflow: "";
+    background-color: white;
+    padding-right: 5px;
+    background-size: 15px 9px;
+    border: 1px solid #888888; }
+
+.form2 .Img-smart div {
+  background-color: #285c7e; }
+.form2 .step2-row1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; }
+  .form2 .step2-row1 .side {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    justify-content: flex-start;
+    padding-left: 30px;
+    box-sizing: border-box; }
+  .form2 .step2-row1 .side-left .flex-wrap {
+    width: 333px;
+    margin-top: 20px; }
+    .form2 .step2-row1 .side-left .flex-wrap button {
+      width: 154px; }
+.form2 .income {
+  flex-direction: row-reverse;
+  align-items: center;
+  width: 80%; }
+  .form2 .income label {
+    font-size: 18px;
+    line-height: 50px;
+    font-weight: 400;
+    font-family: arial,san-sarif;
+    color: black; }
+  .form2 .income div {
+    align-items: center;
+    justify-content: center;
+    flex-direction: row-reverse;
+    padding: 0; }
+    .form2 .income div input {
+      border-radius: 8px;
+      line-height: 40px;
+      border: 1px solid gray;
+      width: 234px;
+      height: 50px; }
+    .form2 .income div img {
+      width: 21px;
+      height: 21px;
+      margin-left: 5px; }
+
+.form3 .sixelements {
+  width: 710px;
+  display: flex;
+  justify-content: space-between; }
+  .form3 .sixelements button {
+    width: 114px; }
+.form3 .FuorInRow {
+  width: 710px;
+  display: flex;
+  justify-content: space-between; }
+  .form3 .FuorInRow button {
+    width: 164px; }
+.form3 .row3 .FuorInRow {
+  flex-wrap: wrap;
+  justify-content: flex-start; }
+  .form3 .row3 .FuorInRow button {
+    width: 164px;
+    display: flex;
+    align-items: center;
+    margin: 5px;
+    padding: 0; }
+    .form3 .row3 .FuorInRow button h3 {
+      word-break: break-all; }
+    .form3 .row3 .FuorInRow button img {
+      height: 34px;
+      padding-right: 5px; }
+
+.Img-smart {
+  border-radius: 50%;
+  background-color: #fff;
+  border: 1px solid #595959;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 15px; }
+  .Img-smart div {
+    border-radius: 50%;
+    background-color: #595959;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .Img-smart div img {
+      width: 25px;
+      height: 25px;
+      padding: 0; }
+
+.flex-col {
+  display: flex;
+  flex-direction: column; }
+
+button {
+  background-color: #fff; }
+
+select::-ms-expand {
+  display: none; }
+
+/*# sourceMappingURL=new-israel-boot.css.map */

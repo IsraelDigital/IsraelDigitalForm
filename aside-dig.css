@@ -1,0 +1,51 @@
+.aside-left ul li h2 {
+  background-repeat: no-repeat;
+  background-size: 48px 34px;
+  background-position-x: right;
+  padding-right: 60px; }
+.aside-left ul li .mydata {
+  background-image: url("../dig-israel-img/id.png");
+  text-align: right; }
+.aside-left ul li .my-rights {
+  background-image: url("../dig-israel-img/id2.png"); }
+.aside-left ul li article h3 {
+  font-size: 17px !important;
+  text-align: right !important; }
+.aside-left ul li article .list .edit {
+  justify-content: space-between;
+  display: flex;
+  align-items: baseline; }
+  .aside-left ul li article .list .edit .no-img {
+    background-size: 0;
+    padding: 0; }
+  .aside-left ul li article .list .edit h3 {
+    font-size: 17px !important; }
+.aside-left ul li article .list .tabstyle {
+  display: flex;
+  flex-direction: column; }
+  .aside-left ul li article .list .tabstyle div {
+    bordr: 0;
+    display: flex;
+    justify-content: space-start; }
+    .aside-left ul li article .list .tabstyle div a, .aside-left ul li article .list .tabstyle div h3 {
+      font-family: Arial;
+      color: #272727;
+      font-size: 17px;
+      font-weight: 400;
+      line-height: 30px;
+      text-align: left; }
+    .aside-left ul li article .list .tabstyle div a {
+      background-image: url("../dig-israel-img/edit.png");
+      background-repeat: no-repeat;
+      background-size: 17px 23px;
+      background-position-x: right;
+      padding-right: 30px;
+      color: #285c7e; }
+    .aside-left ul li article .list .tabstyle div h3 {
+      margin: 0; }
+  .aside-left ul li article .list .tabstyle .mar-top-15 {
+    margin-top: 15px; }
+  .aside-left ul li article .list .tabstyle .bold-700 {
+    font-weight: 700; }
+
+/*# sourceMappingURL=aside-dig.css.map */

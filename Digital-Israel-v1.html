@@ -1,0 +1,589 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="X-UA-Compatible" content="IE=11">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" type="text/css" href="css/new-israel-boot.css" />
+    <link href="bootstrap/css/bootstrap.css" rel="stylesheet" />
+    <link href="bootstrap/css/bootstrap-theme.css" rel="stylesheet" />
+
+    <script src="script/jquery.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="script/dig-israel.js"></script>
+    <script src="../angular/angular.min.js"></script>
+    <script src="js/israelDigital.js"></script>
+
+    <title>ישראל דיגיטאלית- BootStrap-שינויים לבקשת אלכס</title>
+</head>
+<body ng-app="IsraelDigitalForm1">
+    <header>
+        <img src="images/new-israel/header.png" />
+    </header>
+    <div class="container" >
+        <h2>שאלון</h2>
+        <h3>
+            על מנת לסייע לך לקבל את  כל הזכויות המגיעות לך,נשמח עם תענה על מספר שאלות
+            <a href="#"><img src="dig-israel-img/info.png" />הסברים למילוי הטופס</a>
+        </h3>
+    </div>
+    <div id="exTab1" class="container" ng-controller="IsraelDigitalController">
+        <div class='breadcrumbs'>
+            <div class='inner'>
+                <ul class='cf'>
+                    <li class="active">
+                        <a href="#1a" data-toggle="tab" id="1aa" class="active">
+                            <img src="dig-israel-img/vsmart.png" />
+                            <span> פרטים כללים</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#2a" data-toggle="tab" id="2aa">
+                            <div class="Img-smart"><div><img src="dig-israel-img/vsmart2.png" /></div></div>
+                            <span>2. הכנסות וקצבאות </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#3a" data-toggle="tab" id="3aa">
+                            <div class="Img-smart"><div><img src="dig-israel-img/vsmart3.png" /></div></div>
+                            <span> בריאות ודיור</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#4a" data-toggle="tab" id="4aa">
+                            <div class="Img-smart"><div><img src="dig-israel-img/vsmart4.png" /></div></div>
+                            <span> סיכום</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 aside-left">
+                    <ul>
+                        <li>
+                            
+                            <article>
+
+                                <div class="list"> 
+                                    <h2 class="mydata">הנתונים שלי</h2>
+                                    <article class="no-data-exist">
+                                        <img src="dig-israel-img/id.png" />
+                                        <p>
+                                            אין עדין נתונים.<br />
+                                            כאן יוצג סיכום המידע שהזנת בשאלון.
+                                        </p>
+                                    </article>
+
+                                    <div class="tabstyle tab-result1">
+                                        <div class="edit"><h3>{{IsraelDigitalModel.myReference}}</h3><a href="#">עריכה</a></div>
+                                        <div><h3>תושב:</h3><h3 class="bold-700" ng-model="user.resident"> {{IsraelDigitalModel.myCitizen}}</h3></div>
+                                        <div><h3>נולדתי ב:</h3><h3 class="bold-700" ng-model="user.DateOfBirth">{{IsraelDigitalModel.BirthDate.day}}.{{IsraelDigitalModel.BirthDate.month}}.{{IsraelDigitalModel.BirthDate.year}}</h3></div>
+                                        <div><h3>נולדתי ב:</h3><h3 class="bold-700" ng-model="user.PlaceOfBirth">{{IsraelDigitalModel.BirthPlace}}</h3></div>
+                                        <div><h3>מצב משפחתי:</h3><h3 class="bold-700" ng-model="user.MaritalStatus">{{IsraelDigitalModel.familyStatus}}</h3></div>
+                                        <div><h3>מתגורר ב:</h3><h3 class="bold-700" ng-model="user.address">{{IsraelDigitalModel.address}}</h3></div>
+                                    </div>
+                                    <div class="tabstyle tab-result2">
+                                        <div class="edit mar-top-15"><a class="no-img" href="#">הכנסות וקצבאות</a><a href="#">עריכה</a></div>
+                                        <div><h3>מקבל קצבת זקנה <span ng-show="oldAgeAllowanceShow">{{IsraelDigitalModel.IfoldAgeAllowance}}</span></h3></div>
+                                        <div><h3>{{IsraelDigitalModel.oldAgePension}} מקבל קצבת שארים</h3></div>
+                                        <div><h3>{{IsraelDigitalModel.SupplementaryIncome}} מקבל השלמת הכנסה</h3></div>
+                                        <div><h3>{{IsraelDigitalModel.MonthlyPension}} </h3></div>
+                                    </div>
+                                    <div class="tabstyle tab-result3">
+                                        <div class="edit mar-top-15"><a class="no-img" href="#">בריאות ודיור</a><a href="#">עריכה</a></div>
+                                        <div><h3>מתגורר {{IsraelDigitalModel.Rented}}</h3></div>
+                                        <div><h3>קופת חולים {{IsraelDigitalModel.HOM}}</h3></div>
+                                        <div><h3> {{IsraelDigitalModel.DailyAssistance}} צריך סיוע בפעולות יומיומיות  </h3></div>
+                                        <div><h3>{{IsraelDigitalModel.NursingBenefit}} מקבל גמלת סיעוד </h3></div>
+                                    </div>
+
+                                </div>
+                            </article>
+                        </li>
+                        <li>
+                            <h2 class="my-rights">זכויות פוטנציאליות</h2>
+                            <article class="no-data-exist">
+                                <img src="dig-israel-img/id2.png" />
+                                <p>
+                                    אין עדין זכויות בסל.<br />
+                                    בהמשך תוכל לראות את הזכויות המגיעות לך בהתאם לתשובותיך.
+                                </p>
+                            </article>
+
+                            <article class="aside-results">
+                                <div class="list">
+                                    <div><h3>הנחה בארנונה</h3></div>
+                                    <div><h3>פטור מתשלום או הנחה של תרופות בסל הבריאות</h3></div>
+                                    <div><h3>הנחה בשירותי בריאות (תשלום לרופאים מקצועים)</h3></div>
+                                    <div><h3>50% הנחה בתחבורה ציבורית</h3></div>
+                                    <div><h3>50% הנחה במופעי תאטרון</h3></div>
+                                    <div><h3>50% הנחה בכניסה למוזיאונים ותערוכות</h3></div>
+                                    <div><h3>50% בכניסה לשמורות טבע וגנים לאומים</h3></div>
+                                </div>
+                            </article>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-8 main">
+                    <div class="tab-content clearfix">
+                        <div class="tab-pane active" id="1a">
+                            <form class="form1">
+                                <header>
+                                    <img src="dig-israel-img/vsmart.png" />
+                                    <h2> פרטים כללים</h2>
+                                </header>
+                                <ul>
+                                    <li>
+                                        <section>
+                                            <p>1. האם אתה פונה עבורך או עבור אדם אחר?</p>
+
+                                            <div class="threeElement">
+                                                <button type="button" class="me select" ng-click="UpdateModel('myReference','עבורי')">
+                                                    <h3>עבורי</h3>
+                                                </button>
+                                                <button type="button" class="family" ng-click="UpdateModel('myReference','עבור בן משפחה / מכר קרוב')">
+                                                    <h3>עבור בן משפחה / מכר קרוב</h3>
+                                                </button>
+                                                <button type="button" class="other"  ng-click="UpdateModel('myReference','עבור אדם אחר שאני מסייע לו')">
+                                                    <h3>עבור אדם אחר שאני מסייע לו</h3>
+                                                </button>
+                                            </div>
+                                        </section>
+                                    </li>
+                                    <li>
+                                        <section>
+                                            <p>2. האם אתה אזרח ישראלי?</p>
+                                            <!--{{IsraelDigitalModel.myCitizen}}-->
+                                            <div class="two-elements">
+                                                <button class="col-ms-2 select" type="button" id="b1" ng-click="UpdateModel('myCitizen','כן')">
+                                                    <h3>כן</h3>
+                                                </button>
+                                                <button id="b2" type="button" ng-click="UpdateModel('myCitizen','לא')">
+                                                    <h3>לא</h3>
+                                                </button>
+                                            </div>
+                                        </section>
+                                    </li>
+                                    <li>
+                                        <section class="birthday">
+                                            <p>3. תאריך הלידה שלך</p>
+                                            <div class="birth-input">
+                                                <select class="s1" name="singleSelect" ng-model="IsraelDigitalModel.BirthDate.year" ng-change="CalcAge()">
+                                                    <option ng-repeat="year in years" ng-value="year" ng-selected="year" value="{{year}}">{{year}}</option>
+                                                </select>
+                                                <select class="s2" name="singleSelect" ng-model="IsraelDigitalModel.BirthDate.month">
+                                                    <option ng-repeat="month in months" ng-value="month" ng-select="month" value="{{month}}">{{month}}</option>
+                                                </select>
+                                                <select class="s3" name="singleSelect" ng-model="IsraelDigitalModel.BirthDate.day">
+                                                    <option ng-repeat="day in days" ng-value="day" ng-selected="day" value="{{day}}">{{day}}</option>
+                                                </select>
+                                            </div>
+                                            <div class="wrap-all">
+                                                <div class="side-right">
+                                                    <p class="birthday-p">האם ברשותך כרטיס אזרח ותיק?</p>
+                                                    <div class="birthday-div two-elements-s">
+                                                        <button class="" ng-class="'col-ms-2 select'" type="button" ng-click="UpdateModel('Veteran','כן')">
+                                                            <h3>כן</h3>
+                                                        </button>
+                                                        <button class="col-ms-2 Not-for-me" type="button" ng-click="UpdateModel('Veteran','לא')">
+                                                            <h3>לא</h3>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                                <div class="side-left">
+                                                    <div class="massage" style="display:none">
+                                                        <div class="triangle"></div>
+                                                        <div class="flex-row">
+                                                            <img src="#" />
+                                                            <article class="flex-col">
+                                                                <p>הינך זכאי לקבל כרטיס אזרח ותיק.</p>
+                                                                <p>הכרטיס מקנה לך הטבות וזכויות רבות.</p>
+                                                                <br />
+                                                                <p>האם תרצה להתחיל בתהליך עכשיו?</p>
+                                                                <div class="flex-row">
+                                                                    <button>כן,רוצה</button>
+                                                                    <button>שמור לאח"כ</button>
+                                                                </div>
+                                                            </article>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </section>
+                                    </li>
+                                    <li>
+                                        <section>
+                                            <p>4. מגדר</p>
+                                            <div class="two-elements">
+                                                <button class="plusimg col-ms-2 select" type="button" ng-click="UpdateModel('gender','זכר')">
+                                                    <img src="dig-israel-img/male.png" />
+                                                    <h3>זכר</h3>
+                                                </button>
+                                                <button class="plusimg col-ms-2 Not-for-me" ng-click="UpdateModel('gender','נקבה')">
+                                                    <img src="dig-israel-img/female.png" />
+                                                    <h3>נקבה</h3>
+                                                </button>
+                                            </div>
+                                        </section>
+                                    </li>
+                                    <li>
+                                        <section>
+                                            <p>5. מצב משפחתי</p>
+                                            <div class="flex-wrap">
+                                                <button class="select col-ms-2 for-me" type="button" ng-click="UpdateModel('familyStatus','נשוי/אה ידועה בציבור')">
+                                                    <img src="dig-israel-img/marige.png" />
+                                                    <h3>נשוי/אה ידועה בציבור</h3>
+                                                </button>
+                                                <button class="col-ms-2 Not-for-me" type="button" ng-click="UpdateModel('familyStatus','רווק/ה')">
+                                                    <img src="dig-israel-img/male.png" />
+                                                    <h3>רווק/ה</h3>
+                                                </button>
+                                                <button class="col-ms-2 Not-for-me" type="button" ng-click="UpdateModel('familyStatus','גרוש/ה')">
+                                                    <img src="dig-israel-img/devorse.png" />
+                                                    <h3>גרוש/ה</h3>
+                                                </button>
+                                                <button class="col-ms-2 Not-for-me" type="button" ng-click="UpdateModel('familyStatus','אלמן/ה')">
+                                                    <img src="dig-israel-img/wido.png" />
+                                                    <h3>אלמן/ה</h3>
+                                                </button>
+                                            </div>
+                                        </section>
+                                    </li>
+                                    <li>
+                                        <section>
+                                            <p>6. מקום מגורים</p>
+                                            <div class="place">
+                                                <input type="text" name="place" value="עלי" ng-model="IsraelDigitalModel.address" />
+                                                <label>הקלד שם ישוב</label>
+                                            </div>
+                                        </section>
+                                    </li>
+                                    <li>
+                                        <section>
+                                            <p>7. ארץ לידה</p>
+                                            <div class="homeLand">
+                                                <div class="place">
+                                                    <input type="text" name="place" value="טוניס" ng-model="IsraelDigitalModel.BirthPlace" />
+                                                    <label>הקלד ארץ לידה</label>
+                                                </div>
+                                                <div class="place date">
+                                                    <select ng-model="IsraelDigitalModel.yearOfImmigration">
+                                                        <option> 1970</option>
+                                                    </select>
+                                                    <label>שנת עליה</label>
+                                                </div>
+                                            </div>
+                                        </section>
+                                    </li>
+                                </ul>
+                                <button type="submit" class="sub-b level1" ng-click="CalcAge()">
+                                    <h3>השלב הבא</h3>
+                                    <h3>></h3>
+                                </button>
+                                <div class="border"></div>
+                                <footer>
+                                    <button type="button" class="btn btn-primary"><h3>מה דעתך על דף זה?</h3></button>
+                                    <button type="button" class="btn btn-secondary"><h3>שתף</h3><h2>f</h2></button>
+                                    <button type="button" class="btn btn-secondary twiter"><h3>שתף</h3><img src="dig-israel-img/twiter.png" /></button>
+                                </footer>
+                            </form>
+                        </div>
+                        <div class="tab-pane" id="2a">
+                            <form class="form2">
+                                <header>
+                                    <div class="Img-smart"><div><img src="dig-israel-img/vsmart2.png" /></div></div>
+                                    <h2>2. הכנסות וקצבאות</h2>
+                                </header>
+                                <ul>
+                                    <li>
+
+                                        <section class="step2-row1">
+                                            <div class="side-right side">
+                                                <p>1. האם אתה מקבל דמי זיקנה?</p>
+                                                <div class="two-elements">
+                                                    <button class="select"  type="button" ng-click="oldAgeAllowanceShow=true">
+                                                        <h3>כן</h3>
+                                                    </button>
+                                                    <button  type="button" ng-click="oldAgeAllowanceShow=false">
+                                                        <h3>לא</h3>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <div class="side-left side" ng-show="oldAgeAllowanceShow" ng-init="oldAgeAllowanceShow=true">
+                                                <p>אם כן ,מאיזה סוג?</p>
+                                                <div class="threeElement e-3-50-per">
+                                                    <button type="button" ng-click="UpdateModel('IfoldAgeAllowance','מיוחדת לעולה')">
+                                                        <h3>מיוחדת לעולה</h3>
+                                                    </button>
+                                                    <button type="button" ng-click="UpdateModel('IfoldAgeAllowance','השלמה לנכה')">
+                                                        <h3>השלמה לנכה</h3>
+                                                    </button>
+                                                    <button type="button" ng-click="UpdateModel('IfoldAgeAllowance','בסיסית')">
+                                                        <h3>בסיסית</h3>
+                                                    </button>
+                                                </div>
+                                            </div>
+
+                                        </section>
+                                    </li>
+                                    <li>
+                                        <section class="step2-row1 step2-row-2">
+                                            <div class="side-right side">
+                                                <p>2. האם אתה מקבל קצבת שארים?</p>
+                                                <div class="two-elements">
+                                                    <button class="select"  type="button" ng-click="UpdateModel('oldAgePension','כן')">
+                                                        <h3>כן</h3>
+                                                    </button>
+                                                    <button  class="" type="button" ng-click="UpdateModel('oldAgePension','לא')">
+                                                        <h3>לא</h3>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <div class="side-left side">
+
+
+                                            </div>
+
+                                        </section>
+
+                                    </li>
+                                    <li>
+                                        <section class="step2-row1">
+                                            <div class="side-right side">
+                                                <p>3. האם אתה מקבל השלמת הכנסה?</p>
+                                                <div class="two-elements">
+                                                    <button class="select" type="button" ng-click="UpdateModel('SupplementaryIncome','כן')">
+                                                        <h3>כן</h3>
+                                                    </button>
+                                                    <button class="" type="button" ng-click="UpdateModel('SupplementaryIncome','לא')">
+                                                        <h3>לא</h3>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <div class="side-left side">
+
+                                            </div>
+
+                                        </section>
+
+                                    </li>
+                                    <li>
+                                        <section class="step2-row1">
+                                            <div class="side-right side">
+                                                <p>4. האם אתה מקבל קצבה חודשית לניצולי שואה</p>
+                                                <div class="two-elements">
+                                                    <button class="select"  type="button" ng-click="IFMonthlyPension=true">
+                                                        <h3>כן</h3>
+                                                    </button>
+                                                    <button type="button" ng-click="IFMonthlyPension=false">
+                                                        <h3>לא</h3>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <div class="side-left side" ng-show="IFMonthlyPension" ng-init="IFMonthlyPension=true">
+                                                <p>אם כן ,מאיזה סוג?</p>
+                                                <div class="flex-wrap">
+                                                    <button class="select" type="button" ng-click="UpdateModel('MonthlyPension','יוצאי מחנות וגטאות')">
+                                                        <h3>יוצאי מחנות וגטאות</h3>
+                                                    </button>
+                                                    <button type="button" ng-click="UpdateModel('MonthlyPension','קרן סעיף 2 של ועידת התביעות')">
+                                                        <h3>קרן סעיף 2 של ועידת התביעות</h3>
+                                                    </button>
+                                                    <button type="button" ng-click="UpdateModel('MonthlyPension','תגמול לנכה רדיפת הנאצים')">
+                                                        <h3>תגמול לנכה רדיפת הנאצים</h3>
+                                                    </button>
+                                                    <button type="button" ng-click="UpdateModel('MonthlyPension','רנטה בריאות מגרמניה (BEG)')">
+                                                        <h3>רנטה בריאות מגרמניה (BEG)</h3>
+                                                    </button>
+                                                </div>
+                                            </div>
+
+                                        </section>
+
+                                    </li>
+                                    <li>
+                                        <section>
+                                            <p>5. מהן הכנסותיך החודשיות?</p>
+                                            <div class="flex-col">
+                                                <div class="income">
+                                                    <div><input type="number" /><img src="dig-israel-img/info.png" /></div>
+                                                    <label>פנסיה</label>
+                                                </div>
+                                                <div class="income">
+                                                    <div><input type="number" /><img src="dig-israel-img/info.png" /></div>
+                                                    <label>עבודה</label>
+                                                </div>
+                                                <div class="income">
+                                                    <div><input type="number" /><img src="dig-israel-img/info.png" /></div>
+                                                    <label>הון/נכסים</label>
+                                                </div>
+                                            </div>
+                                        </section>
+                                    </li>
+
+                                </ul>
+                                <button type="submit" data-toggle="tab" class="sub-b level2">
+                                    <h3>השלב הבא</h3>
+                                    <h3>></h3>
+                                </button>
+                                <div class="border"></div>
+                                <footer>
+                                    <button type="button" class="btn btn-primary"><h3>מה דעתך על דף זה?</h3></button>
+                                    <button type="button" class="btn btn-secondary"><h3>שתף</h3><h2>f</h2></button>
+                                    <button type="button" class="btn btn-secondary twiter"><h3>שתף</h3><img src="dig-israel-img/twiter.png" /></button>
+                                </footer>
+                            </form>
+                        </div>
+                        <div class="tab-pane" id="3a">
+                            <form class="form3">
+                                <header>
+                                    <div class="Img-smart"><div><img src="dig-israel-img/vsmart3.png" /></div></div>
+                                    <h2>3. בריאות ודיור</h2>
+                                </header>
+                                <ul>
+                                    <li>
+                                        <section class="row1">
+                                            <p>1. היכן אתה מתגורר?</p>
+                                            <div class="sixelements">  
+                                                <button class="for-me" type="button" ng-click="UpdateModel('Rented','בדירה בבעלותי')">
+                                                    <h3>דירה בבעלותי</h3>
+                                                </button>
+                                                <button class="select" type="button" ng-click="UpdateModel('Rented','בשכירות')">
+                                                    <h3>בשכירות</h3>
+                                                </button>
+                                                <button class="for-me" type="button" ng-click="UpdateModel('Rented','בדיור ציבורי')">
+                                                    <h3>בדיור ציבורי</h3>
+                                                </button>
+                                                <button class="Not-for-me" type="button" ng-click="UpdateModel('Rented','בדיור מוגן')">
+                                                    <h3>בדיור מוגן</h3>
+                                                </button>
+                                                <button class="for-me" type="button" ng-click="UpdateModel('Rented','בבית אבות')">
+                                                    <h3>בבית אבות</h3>
+                                                </button>
+                                                <button class="Not-for-me" type="button" ng-click="UpdateModel('Rented','במוסד סיעודי')">
+                                                    <h3>במוסד סיעודי</h3>
+                                                </button>
+                                            </div>
+                                        </section>
+                                    </li>
+                                    <li>
+                                        <section class="row2">
+                                            <p>2. לאיזה קופת חולים אתה שייך?</p>
+                                            <div class="FuorInRow">
+                                                <button class="select" id="b1" type="button" ng-click="UpdateModel('HOM','מאוחדת')">
+                                                    <h3>מאוחדת</h3>
+                                                </button>
+                                                <button type="button" ng-click="UpdateModel('HOM','מכבי')">
+                                                    <h3>מכבי</h3>
+                                                </button>
+                                                <button type="button" ng-click="UpdateModel('HOM','כללית')">
+                                                    <h3>כללית</h3>
+                                                </button>
+                                                <button type="button" ng-click="UpdateModel('HOM','לאומית')">
+                                                    <h3>לאומית</h3>
+                                                </button>
+                                            </div>
+                                        </section>
+                                    </li>
+                                    <li>
+                                        <section class="row3">
+                                            <p>3. האם אתה סובל מאחת המחלות/לקויות הבאות</p>
+                                            <div class="FuorInRow">
+                                                <button class="select" id="b1">
+                                                    <img src="dig-israel-img/dementia.png" />
+                                                    <h3>אלמהיימר/דמנציה</h3>
+                                                </button>
+                                                <button id="b2">
+                                                    <img src="dig-israel-img/cancer.png" />
+                                                    <h3>סרטן</h3>
+                                                </button>
+                                                <button id="b1">
+                                                    <img src="dig-israel-img/heart.png" />
+                                                    <h3>מחלות לב</h3>
+                                                </button>
+                                                <button id="b2">
+                                                    <img src="dig-israel-img/diabtic.png" />
+                                                    <h3>סכרת</h3>
+                                                </button>
+                                                <button id="b1">
+                                                    <img src="dig-israel-img/handicap.png" />
+                                                    <h3>מגבלות בתנועה</h3>
+                                                </button>
+                                                <button id="b2">
+                                                    <img src="dig-israel-img/blind.png" />
+                                                    <h3>עיוורון/כבדות ראיה</h3>
+                                                </button>
+                                                <button id="b1">
+                                                    <img src="dig-israel-img/hear.png" />
+                                                    <h3>חירשות /כבדות שמיעה</h3>
+                                                </button>
+                                            </div>
+                                        </section>
+                                    </li>
+                                    <li>
+                                        <section class="row4">
+                                            <p>4. האם מצבך הבריאותי מצריך סיוע או עזרה בביצוע פעולות יומיומיות בבית</p>
+                                            <div class="two-elements">
+                                                <button class="select" type="button" ng-click="UpdateModel('DailyAssistance','כן')">
+                                                    <h3>כן</h3>
+                                                </button>
+                                                <button type="button" ng-click="UpdateModel('DailyAssistance','לא')">
+                                                    <h3>לא</h3>
+                                                </button>
+                                            </div>
+                                        </section>
+                                    </li>
+                                    <li>
+                                        <section class="row4">
+                                            <p>5. האם אתה מקבל גמלת סיעוד</p>
+                                            <div class="two-elements">
+                                                <button type="button" ng-click="UpdateModel('NursingBenefit','כן')">
+                                                    <h3>כן</h3>
+                                                </button>
+                                                <button class="select" type="button" ng-click="UpdateModel('NursingBenefit','לא')">
+                                                    <h3>לא</h3>
+                                                </button>
+                                            </div>
+                                        </section>
+                                    </li>
+                                </ul>
+                                <button type="submit" data-toggle="tab" class="sub-b level3">
+                                    <h3>השלב הבא</h3>
+                                    <h3>></h3>
+                                </button>
+                                <div class="border"></div>
+                                <footer>
+                                    <button type="button" class="btn btn-primary"><h3>מה דעתך על דף זה?</h3></button>
+                                    <button type="button" class="btn btn-secondary"><h3>שתף</h3><h2>f</h2></button>
+                                    <button type="button" class="btn btn-secondary twiter"><h3>שתף</h3><img src="dig-israel-img/twiter.png" /></button>
+                                </footer>
+                            </form>
+                        </div>
+                        <div class="tab-pane" id="4a">
+                            <form class="form1">
+                                <h2>4.סיכום</h2>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <img src="images/new-israel/footer.png" />
+    </footer>
+
+
+
+    <script>
+
+    </script>
+
+</body>
+
+</html>                                                   
